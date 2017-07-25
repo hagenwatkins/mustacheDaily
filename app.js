@@ -9,12 +9,14 @@ app.set('views', __dirname + '/views');
 
 app.get('/', function(req, res) {
   //TODO: Create a mustache index view that links to the other pages below
+  res.render('index');
 });
 
 app.get('/simpleobject', function(req, res) {
   let president = { firstName: 'Franklin', lastName: 'Roosevelt' }
 
   //TODO: Create a view and render `president`
+  res.render('president', president);
 });
 
 app.get('/nestedobject', function(req, res) {
@@ -26,7 +28,7 @@ app.get('/nestedobject', function(req, res) {
       name: 'Democrat'
     }
   }
-
+  res.render('person',person);
   //TODO: Create a view and render `person`.
 });
 
@@ -36,7 +38,7 @@ app.get('/nestedarray', function(req, res) {
 
     favoriteFoods: ['steak', 'shrimp', 'wings', 'nachos']
   };
-
+  res.render('dude', dude);
   //TODO: Create a view and render `dude`
 });
 
@@ -68,6 +70,7 @@ app.get('/nestedarrayofobjects', function(req, res) {
     ]
   }
   //TODO: Create a view and render `library`
+  res.render('library',library);
 });
 
 app.get('/renderconditionally', function(req, res) {
@@ -78,6 +81,7 @@ app.get('/renderconditionally', function(req, res) {
   }
 
   //TODO: Create a view and render `secretAgent`. If the `showRealName` property is `false`, don't render `realName`. If it is `true`, render `realName`. To test this, try changing the value above back and forth
+  res.render('secret-agent', secretAgent);
 });
 
 app.get('/renderconditionallyinarray', function(req, res) {
@@ -111,7 +115,7 @@ app.get('/renderconditionallyinarray', function(req, res) {
       }
     ]
   }
-
+res.render('libraryAccount',libraryAccount);
   //TODO: Create a view and render `libraryAccount`. Use different styling for the late books than the non-late books.
 });
 

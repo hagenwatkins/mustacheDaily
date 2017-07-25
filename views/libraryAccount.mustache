@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Library Account</title>
+  </head>
+  <body>
+<h1>{{borrower}}</h1>
+{{#books}}
+  {{#isLate}}
+    <h2 style="color: red">{{title}}</h2>
+    <h3 style="color: red">This book is late </h3>
+
+  {{/isLate}}
+  {{^isLate}}
+    <h2>{{title}}</h2>
+
+  {{/isLate}}
+
+  <ul>
+    <li>{{publicationDate}}</li>
+    <li>{{author}}</li>
+    <li>{{isLate}}</li>
+  </ul>
+
+{{/books}}
+  </body>
+</html>

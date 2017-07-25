@@ -1,15 +1,23 @@
 {
   "name": "rendering-practice",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Hagen and Austin",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
     "mustache-express": "^1.2.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hagenwatkins/mustacheDaily.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hagenwatkins/mustacheDaily/issues"
+  },
+  "homepage": "https://github.com/hagenwatkins/mustacheDaily#readme",
+  "description": ""
 }
